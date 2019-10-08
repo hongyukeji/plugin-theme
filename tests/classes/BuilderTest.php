@@ -1,6 +1,6 @@
 <?php
 
-use Hongyukeji\Theme\Loader as Loader;
+use Hongyukeji\PluginTheme\Loader as Loader;
 
 class BuilderTest extends PHPUnit_Framework_TestCase
 {
@@ -11,7 +11,7 @@ class BuilderTest extends PHPUnit_Framework_TestCase
 
     /**
      *
-     * @return  \Hongyukeji\Theme\Loader
+     * @return  \Hongyukeji\PluginTheme\Loader
      */
     public function load()
     {
@@ -23,7 +23,7 @@ class BuilderTest extends PHPUnit_Framework_TestCase
 
     /**
      *
-     * @return  \Hongyukeji\Theme\Theme
+     * @return  \Hongyukeji\PluginTheme\Theme
      */
     public function theme()
     {
@@ -34,7 +34,7 @@ class BuilderTest extends PHPUnit_Framework_TestCase
 
     /**
      *
-     * @return  \Hongyukeji\Theme\Builder
+     * @return  \Hongyukeji\PluginTheme\Builder
      */
     public function bld()
     {
@@ -43,28 +43,28 @@ class BuilderTest extends PHPUnit_Framework_TestCase
 
     public function testConstruct()
     {
-        $this->assertInstanceOf('Hongyukeji\Theme\Builder', $this->bld());
+        $this->assertInstanceOf('Hongyukeji\PluginTheme\Builder', $this->bld());
     }
 
     public function testGetTheme()
     {
-        $this->assertInstanceOf('Hongyukeji\Theme\Theme', $this->bld()->getTheme());
+        $this->assertInstanceOf('Hongyukeji\PluginTheme\Theme', $this->bld()->getTheme());
     }
 
     public function testGetParamManager()
     {
-        $this->assertInstanceOf('Hongyukeji\Theme\ParamManager', $this->bld()->getParamManager());
+        $this->assertInstanceOf('Hongyukeji\PluginTheme\ParamManager', $this->bld()->getParamManager());
     }
 
     public function testCreateLayout()
     {
-        $this->assertInstanceOf('Hongyukeji\Theme\View', $this->bld()->createLayout('this_layout'));
+        $this->assertInstanceOf('Hongyukeji\PluginTheme\View', $this->bld()->createLayout('this_layout'));
         $this->assertInstanceOf('Hongyukeji\Foolfake\Theme\Fake\Layout\ThisLayout', $this->bld()->createLayout('this_layout'));
     }
 
     public function testCreatePartial()
     {
-        $this->assertInstanceOf('Hongyukeji\Theme\View', $this->bld()->createPartial('one_partial', 'this_partial'));
+        $this->assertInstanceOf('Hongyukeji\PluginTheme\View', $this->bld()->createPartial('one_partial', 'this_partial'));
         $this->assertInstanceOf('Hongyukeji\Foolfake\Theme\Fake\Partial\ThisPartial', $this->bld()->createPartial('one_partial', 'this_partial'));
     }
 
@@ -72,7 +72,7 @@ class BuilderTest extends PHPUnit_Framework_TestCase
     {
         $bld = $this->bld();
         $bld->createLayout('this_layout');
-        $this->assertInstanceOf('Hongyukeji\Theme\View', $bld->getLayout('this_layout'));
+        $this->assertInstanceOf('Hongyukeji\PluginTheme\View', $bld->getLayout('this_layout'));
         $this->assertInstanceOf('Hongyukeji\Foolfake\Theme\Fake\Layout\ThisLayout', $bld->getLayout('this_layout'));
     }
 
@@ -80,7 +80,7 @@ class BuilderTest extends PHPUnit_Framework_TestCase
     {
         $bld = $this->bld();
         $bld->createPartial('one_partial', 'this_partial');
-        $this->assertInstanceOf('Hongyukeji\Theme\View', $bld->getPartial('one_partial', 'this_partial'));
+        $this->assertInstanceOf('Hongyukeji\PluginTheme\View', $bld->getPartial('one_partial', 'this_partial'));
         $this->assertInstanceOf('Hongyukeji\Foolfake\Theme\Fake\Partial\ThisPartial', $bld->getPartial('one_partial', 'this_partial'));
     }
 

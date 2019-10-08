@@ -1,6 +1,6 @@
 <?php
 
-use Hongyukeji\Theme\Loader;
+use Hongyukeji\PluginTheme\Loader;
 
 class LoaderTest extends PHPUnit_Framework_TestCase
 {
@@ -9,6 +9,6 @@ class LoaderTest extends PHPUnit_Framework_TestCase
         $new = Loader::forge('default');
         $new->addDir('test', __DIR__.'/../../tests/mock/');
         $theme = $new->get('test', 'hongyukeji/foolfake-theme-fake');
-        $this->assertInstanceOf('Hongyukeji\Theme\Theme', $theme);
+        $this->assertInstanceOf('Hongyukeji\PluginTheme\Theme', $theme);
     }
 }

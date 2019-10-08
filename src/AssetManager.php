@@ -1,13 +1,13 @@
 <?php
 
-namespace Hongyukeji\Theme;
+namespace Hongyukeji\PluginTheme;
 
-class AssetManager extends \Hongyukeji\Package\AssetManager
+class AssetManager extends \Hongyukeji\PluginPackage\AssetManager
 {
     /**
      * Returns the Package object that created this instance of AssetManager
      *
-     * @return  \Hongyukeji\Theme\Theme|null  The Package object that created this instance of AssetManager
+     * @return  \Hongyukeji\PluginTheme\Theme|null  The Package object that created this instance of AssetManager
      */
     public function getTheme()
     {

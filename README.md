@@ -7,7 +7,7 @@ You will need PHP 5.4 for this to work. You can install it through [Composer](ht
 
 ## What a mess!
 
-Hongyukeji\Theme works on top of Hongyukeji\Plugin. This means it has built-in support for plugin-like stuff, that you can use or ignore at will. We use it to allow re-skinning and hooking links on the interface.
+Hongyukeji\PluginTheme works on top of Hongyukeji\Plugin. This means it has built-in support for plugin-like stuff, that you can use or ignore at will. We use it to allow re-skinning and hooking links on the interface.
 
 We created our own Theme system because other theme systems were nothing more than View managers, monolithic and raw.
 
@@ -115,7 +115,7 @@ Parameter managers are used to consistently store variables for use in the theme
 
 #### View
 
-The View returned by the Builder is usually a custom object extending \Hongyukeji\Theme\View.
+The View returned by the Builder is usually a custom object extending \Hongyukeji\PluginTheme\View.
 
 There's also a bunch of shortcuts to go to the above levels available (getBuilder, getBuilderParamManager, getTheme, getAssetManager)
 

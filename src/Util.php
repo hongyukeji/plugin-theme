@@ -1,6 +1,6 @@
 <?php
 
-namespace Hongyukeji\Theme;
+namespace Hongyukeji\PluginTheme;
 
 class Util
 {

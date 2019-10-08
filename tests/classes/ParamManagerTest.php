@@ -1,6 +1,6 @@
 <?php
 
-use Hongyukeji\Theme\ParamManager as ParamManager;
+use Hongyukeji\PluginTheme\ParamManager as ParamManager;
 
 class ParamManagerTest extends PHPUnit_Framework_TestCase
 {

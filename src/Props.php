@@ -1,6 +1,6 @@
 <?php
 
-namespace Hongyukeji\Theme;
+namespace Hongyukeji\PluginTheme;
 
 class Props
 {
@@ -23,7 +23,7 @@ class Props
      *
      * @param  array  $title  The array of elements of which the title is composed
      *
-     * @return  \Hongyukeji\Theme\Props  The current object
+     * @return  \Hongyukeji\PluginTheme\Props  The current object
      */
     public function setTitle(array $title = [])
     {
@@ -37,7 +37,7 @@ class Props
      *
      * @param  string  $title  The element to add to the title
      *
-     * @return  \Hongyukeji\Theme\Props  The current object
+     * @return  \Hongyukeji\PluginTheme\Props  The current object
      */
     public function addTitle($title)
     {
@@ -51,7 +51,7 @@ class Props
      *
      * @param  string  $separator  The separator string
      *
-     * @return  \Hongyukeji\Theme\Props  The current object
+     * @return  \Hongyukeji\PluginTheme\Props  The current object
      */
     public function setTitleSeparator($separator)
     {

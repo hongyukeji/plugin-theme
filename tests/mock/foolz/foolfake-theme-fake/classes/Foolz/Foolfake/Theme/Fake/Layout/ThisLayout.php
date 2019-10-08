@@ -2,7 +2,7 @@
 
 namespace Hongyukeji\Foolfake\Theme\Fake\Layout;
 
-class ThisLayout extends \Hongyukeji\Theme\View
+class ThisLayout extends \Hongyukeji\PluginTheme\View
 {
 	public function toString()
 	{

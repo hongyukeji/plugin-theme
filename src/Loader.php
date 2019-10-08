@@ -1,15 +1,15 @@
 <?php
 
-namespace Hongyukeji\Theme;
+namespace Hongyukeji\PluginTheme;
 
 /**
  * Automates loading of themes
  *
  * @author   Hongyukeji <support@hongyuvip.com>
- * @package  Hongyukeji\Theme
+ * @package  Hongyukeji\PluginTheme
  * @license  http://www.apache.org/licenses/LICENSE-2.0.html Apache License 2.0
  */
-class Loader extends \Hongyukeji\Package\Loader
+class Loader extends \Hongyukeji\PluginPackage\Loader
 {
     /**
      * The type of package in use. Can be in example 'theme' or 'theme'
@@ -21,11 +21,11 @@ class Loader extends \Hongyukeji\Package\Loader
 
     /**
      * The class into which the resulting objects are created.
-     * Override this, in example Hongyukeji\Theme\Theme or Hongyukeji\Theme\Theme
+     * Override this, in example Hongyukeji\PluginTheme\Theme or Hongyukeji\PluginTheme\Theme
      *
      * @var  string
      */
-    protected $type_class = 'Hongyukeji\Theme\Theme';
+    protected $type_class = 'Hongyukeji\PluginTheme\Theme';
 
     /**
      * Path to public directory where assets are copied
@@ -46,7 +46,7 @@ class Loader extends \Hongyukeji\Package\Loader
      *
      * @param   string  $instance  The name of the instance to use or create
      *
-     * @return  \Hongyukeji\Theme\Loader
+     * @return  \Hongyukeji\PluginTheme\Loader
      */
     public static function forge($instance = 'default')
     {
@@ -86,7 +86,7 @@ class Loader extends \Hongyukeji\Package\Loader
     /**
      * Gets all the themes or the themes from the directory
      *
-     * @return  \Hongyukeji\Theme\Theme[]    All the themes or the themes in the directory
+     * @return  \Hongyukeji\PluginTheme\Theme[]    All the themes or the themes in the directory
      * @throws  \OutOfBoundsException   If there isn't such a $dir_name set
      */
     public function getAll()
@@ -99,7 +99,7 @@ class Loader extends \Hongyukeji\Package\Loader
      *
      * @param   string  $slug      The slug of the theme
      *
-     * @return  \Hongyukeji\Theme\Theme
+     * @return  \Hongyukeji\PluginTheme\Theme
      * @throws  \OutOfBoundsException  if the theme doesn't exist
      */
     public function get($slug)

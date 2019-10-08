@@ -2,7 +2,7 @@
 
 namespace Hongyukeji\Foolfake\Theme\Fake\Partial;
 
-class ThisPartial extends \Hongyukeji\Theme\View
+class ThisPartial extends \Hongyukeji\PluginTheme\View
 {
 	public function toString()
 	{

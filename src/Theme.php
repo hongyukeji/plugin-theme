@@ -1,8 +1,8 @@
 <?php
 
-namespace Hongyukeji\Theme;
+namespace Hongyukeji\PluginTheme;
 
-class Theme extends \Hongyukeji\Package\Package
+class Theme extends \Hongyukeji\PluginPackage\Package
 {
     protected static $autoloaded = [];
 
@@ -19,7 +19,7 @@ class Theme extends \Hongyukeji\Package\Package
     /**
      * Gets the loader that created this object
      *
-     * @return  \Hongyukeji\Theme\Loader
+     * @return  \Hongyukeji\PluginTheme\Loader
      */
     public function getLoader()
     {
@@ -29,7 +29,7 @@ class Theme extends \Hongyukeji\Package\Package
     /**
      * Returns a new Builder object
      *
-     * @return  \Hongyukeji\Theme\Builder  A new instance of the builder
+     * @return  \Hongyukeji\PluginTheme\Builder  A new instance of the builder
      */
     public function createBuilder()
     {
@@ -39,7 +39,7 @@ class Theme extends \Hongyukeji\Package\Package
     /**
      * Returns an AssetManager object to deal with the assets
      *
-     * @return  \Hongyukeji\Theme\AssetManager  A new instance of the AssetManager
+     * @return  \Hongyukeji\PluginTheme\AssetManager  A new instance of the AssetManager
      */
     public function getAssetManager()
     {
@@ -53,7 +53,7 @@ class Theme extends \Hongyukeji\Package\Package
     /**
      * Checks for the existence of a theme to extend and returns the theme
      *
-     * @return  \Hongyukeji\Theme\Theme     The base theme we're extending with the current
+     * @return  \Hongyukeji\PluginTheme\Theme     The base theme we're extending with the current
      * @throws  \OutOfBoundsException  If the theme is not found or no extended theme has been specified
      */
     public function getExtended()

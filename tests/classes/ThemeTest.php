@@ -1,13 +1,13 @@
 <?php
 
-use Hongyukeji\Theme\Theme as Theme;
-use Hongyukeji\Theme\Loader as Loader;
+use Hongyukeji\PluginTheme\Theme as Theme;
+use Hongyukeji\PluginTheme\Loader as Loader;
 
 class ThemeTest extends PHPUnit_Framework_TestCase
 {
     /**
      *
-     * @return  \Hongyukeji\Theme\Loader
+     * @return  \Hongyukeji\PluginTheme\Loader
      */
     public function load()
     {
@@ -25,7 +25,7 @@ class ThemeTest extends PHPUnit_Framework_TestCase
 
     /**
      *
-     * @return  \Hongyukeji\Theme\Theme
+     * @return  \Hongyukeji\PluginTheme\Theme
      */
     public function theme()
     {
@@ -36,17 +36,17 @@ class ThemeTest extends PHPUnit_Framework_TestCase
 
     public function testTheme()
     {
-        $this->assertInstanceOf('Hongyukeji\Theme\Theme', $this->theme());
+        $this->assertInstanceOf('Hongyukeji\PluginTheme\Theme', $this->theme());
     }
 
     public function testCreateBuilder()
     {
-        $this->assertInstanceOf('Hongyukeji\Theme\Builder', $this->theme()->createBuilder());
+        $this->assertInstanceOf('Hongyukeji\PluginTheme\Builder', $this->theme()->createBuilder());
     }
 
     public function testGetAssetManager()
     {
-        $this->assertInstanceOf('Hongyukeji\Theme\AssetManager', $this->theme()->getAssetManager());
+        $this->assertInstanceOf('Hongyukeji\PluginTheme\AssetManager', $this->theme()->getAssetManager());
     }
 
     /**

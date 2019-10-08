@@ -1,13 +1,13 @@
 <?php
 
-namespace Hongyukeji\Theme;
+namespace Hongyukeji\PluginTheme;
 
 class Builder
 {
     /**
      * The theme object
      *
-     * @var  \Hongyukeji\Theme\Theme
+     * @var  \Hongyukeji\PluginTheme\Theme
      */
     protected $theme = null;
 
@@ -21,28 +21,28 @@ class Builder
     /**
      * The selected layout
      *
-     * @var  \Hongyukeji\Theme\View
+     * @var  \Hongyukeji\PluginTheme\View
      */
     protected $layout = null;
 
     /**
      * The array of named partials with their data and object
      *
-     * @var  \Hongyukeji\Theme\View[]  Associative array with as key the given name of the partial
+     * @var  \Hongyukeji\PluginTheme\View[]  Associative array with as key the given name of the partial
      */
     protected $partials = [];
 
     /**
      * "Global" parameter manager, for the entire Builder
      *
-     * @var \Hongyukeji\Theme\ParamManager
+     * @var \Hongyukeji\PluginTheme\ParamManager
      */
     protected $param_manager;
 
     /**
      * Instance of a props object
      *
-     * @var  \Hongyukeji\Theme\Props
+     * @var  \Hongyukeji\PluginTheme\Props
      */
     protected $props = null;
 
@@ -56,9 +56,9 @@ class Builder
     /**
      * We need at least a theme
      *
-     * @param  \Hongyukeji\Theme\Theme  $theme  The theme object creating this builder
+     * @param  \Hongyukeji\PluginTheme\Theme  $theme  The theme object creating this builder
      */
-    public function __construct(\Hongyukeji\Theme\Theme $theme)
+    public function __construct(\Hongyukeji\PluginTheme\Theme $theme)
     {
         $this->theme = $theme;
         $this->param_manager = new ParamManager();
@@ -68,7 +68,7 @@ class Builder
     /**
      * Returns the theme object
      *
-     * @return  \Hongyukeji\Theme\Theme  Returns the theme object that created this Builder
+     * @return  \Hongyukeji\PluginTheme\Theme  Returns the theme object that created this Builder
      */
     public function getTheme()
     {
@@ -81,7 +81,7 @@ class Builder
      * @param  null|string  $style The key of the style, null for setting no style
      *
      * @throws  \OutOfBoundsException  If the style doesn't exist
-     * @return  $this  \Hongyukeji\Theme\Builder
+     * @return  $this  \Hongyukeji\PluginTheme\Builder
      */
     public function setStyle($style = null)
     {
@@ -115,7 +115,7 @@ class Builder
     /**
      * Returns the Builder instance of the Parameter Manger
      *
-     * @return  \Hongyukeji\Theme\ParamManager
+     * @return  \Hongyukeji\PluginTheme\ParamManager
      */
     public function getParamManager()
     {
@@ -125,7 +125,7 @@ class Builder
     /**
      * Returns the props object to manage title, meta etc.
      *
-     * @return  \Hongyukeji\Theme\Props  The props object
+     * @return  \Hongyukeji\PluginTheme\Props  The props object
      */
     public function getProps()
     {
@@ -137,7 +137,7 @@ class Builder
      *
      * @param  string  $view  The name of the view file, all lowercase and with words separated with underscore
      *
-     * @return  \Hongyukeji\Theme\View
+     * @return  \Hongyukeji\PluginTheme\View
      */
     public function createLayout($view)
     {
@@ -150,7 +150,7 @@ class Builder
      * @param  string  $name  A given name for the partial
      * @param  string  $view  The name of the view file, all lowercase and with words separated with underscore
      *
-     * @return  \Hongyukeji\Theme\View  The View object for the partial
+     * @return  \Hongyukeji\PluginTheme\View  The View object for the partial
      */
     public function createPartial($name, $view)
     {
@@ -160,7 +160,7 @@ class Builder
     /**
      * Returns the previously created layout
      *
-     * @return  \Hongyukeji\Theme\View        The recalled layout
+     * @return  \Hongyukeji\PluginTheme\View        The recalled layout
      * @throws  \BadMethodCallException  If the layout wasn't created before
      */
     public function getLayout()
@@ -177,7 +177,7 @@ class Builder
      *
      * @param  string  $name  The given name of the partial
      *
-     * @return  \Hongyukeji\Theme\View      The recalled partial
+     * @return  \Hongyukeji\PluginTheme\View      The recalled partial
      * @throws  \OutOfBoundsException  If the partial wasn't created before
      */
     public function getPartial($name)

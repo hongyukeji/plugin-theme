@@ -1,6 +1,6 @@
 <?php
 
-namespace Hongyukeji\Theme;
+namespace Hongyukeji\PluginTheme;
 
 class ParamManager
 {
@@ -14,7 +14,7 @@ class ParamManager
     /**
      * Resets the object to the initial state
      *
-     * @return  \Hongyukeji\Theme\ParamManager  The current object
+     * @return  \Hongyukeji\PluginTheme\ParamManager  The current object
      */
     public function reset()
     {
@@ -62,7 +62,7 @@ class ParamManager
      * @param   string  $key    The key for the value
      * @param   mixed   $value  The value
      *
-     * @return  \Hongyukeji\Theme\ParamManager  The current object
+     * @return  \Hongyukeji\PluginTheme\ParamManager  The current object
      */
     public function setParam($key, $value)
     {
@@ -75,7 +75,7 @@ class ParamManager
      * Updates several parameters
      *
      * @param   array  $array  Array with as keys the parameter key and as value the parameter value
-     * @return  \Hongyukeji\Theme\ParamManager
+     * @return  \Hongyukeji\PluginTheme\ParamManager
      */
     public function setParams($array)
     {
