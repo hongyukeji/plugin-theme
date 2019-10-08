@@ -1,6 +1,6 @@
 <?php
 
-namespace Foolz\Theme;
+namespace Hongyukeji\Theme;
 
 class ParamManager
 {
@@ -14,7 +14,7 @@ class ParamManager
     /**
      * Resets the object to the initial state
      *
-     * @return  \Foolz\Theme\ParamManager  The current object
+     * @return  \Hongyukeji\Theme\ParamManager  The current object
      */
     public function reset()
     {
@@ -62,7 +62,7 @@ class ParamManager
      * @param   string  $key    The key for the value
      * @param   mixed   $value  The value
      *
-     * @return  \Foolz\Theme\ParamManager  The current object
+     * @return  \Hongyukeji\Theme\ParamManager  The current object
      */
     public function setParam($key, $value)
     {
@@ -75,7 +75,7 @@ class ParamManager
      * Updates several parameters
      *
      * @param   array  $array  Array with as keys the parameter key and as value the parameter value
-     * @return  \Foolz\Theme\ParamManager
+     * @return  \Hongyukeji\Theme\ParamManager
      */
     public function setParams($array)
     {

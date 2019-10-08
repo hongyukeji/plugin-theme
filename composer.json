@@ -1,25 +1,22 @@
 {
-    "name": "foolz/theme",
+    "name": "hongyukeji/plugin-theme",
     "type": "library",
     "description": "An opinionated theme system where even the views can be classes, and everything is a plugin.",
     "keywords": ["theme", "views", "template"],
-    "homepage": "http://www.foolz.us",
-    "license": "Apache-2.0",
-    "authors": [{"name": "foolz", "email": "support@foolz.us"}],
+    "homepage": "http://www.hongyuvip.com",
+    "license": "MIT",
+    "authors": [{"name": "hongyukeji", "email": "support@hongyuvip.com"}],
     "support": {
-        "email": "support@foolz.us",
-        "irc": "irc://irc.irchighway.net/fooldriver"
+        "email": "support@hongyuvip.com"
     },
     "require": {
         "php": ">=5.3.0",
-		"foolz/package": "dev-master"
+		"hongyukeji/plugin-package": "^1.1"
     },
-	"require-dev": {
-		"foolz/cache": "dev-master"
-	},
+	"require-dev": {},
     "autoload": {
         "psr-4": {
-            "Foolz\\Theme\\": "src/"
+            "Hongyukeji\\Theme\\": "src/"
         }
     }
 }

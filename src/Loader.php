@@ -1,15 +1,15 @@
 <?php
 
-namespace Foolz\Theme;
+namespace Hongyukeji\Theme;
 
 /**
  * Automates loading of themes
  *
- * @author   Foolz <support@foolz.us>
- * @package  Foolz\Theme
+ * @author   Hongyukeji <support@hongyuvip.com>
+ * @package  Hongyukeji\Theme
  * @license  http://www.apache.org/licenses/LICENSE-2.0.html Apache License 2.0
  */
-class Loader extends \Foolz\Package\Loader
+class Loader extends \Hongyukeji\Package\Loader
 {
     /**
      * The type of package in use. Can be in example 'theme' or 'theme'
@@ -21,11 +21,11 @@ class Loader extends \Foolz\Package\Loader
 
     /**
      * The class into which the resulting objects are created.
-     * Override this, in example Foolz\Theme\Theme or Foolz\Theme\Theme
+     * Override this, in example Hongyukeji\Theme\Theme or Hongyukeji\Theme\Theme
      *
      * @var  string
      */
-    protected $type_class = 'Foolz\Theme\Theme';
+    protected $type_class = 'Hongyukeji\Theme\Theme';
 
     /**
      * Path to public directory where assets are copied
@@ -46,7 +46,7 @@ class Loader extends \Foolz\Package\Loader
      *
      * @param   string  $instance  The name of the instance to use or create
      *
-     * @return  \Foolz\Theme\Loader
+     * @return  \Hongyukeji\Theme\Loader
      */
     public static function forge($instance = 'default')
     {
@@ -86,7 +86,7 @@ class Loader extends \Foolz\Package\Loader
     /**
      * Gets all the themes or the themes from the directory
      *
-     * @return  \Foolz\Theme\Theme[]    All the themes or the themes in the directory
+     * @return  \Hongyukeji\Theme\Theme[]    All the themes or the themes in the directory
      * @throws  \OutOfBoundsException   If there isn't such a $dir_name set
      */
     public function getAll()
@@ -99,7 +99,7 @@ class Loader extends \Foolz\Package\Loader
      *
      * @param   string  $slug      The slug of the theme
      *
-     * @return  \Foolz\Theme\Theme
+     * @return  \Hongyukeji\Theme\Theme
      * @throws  \OutOfBoundsException  if the theme doesn't exist
      */
     public function get($slug)

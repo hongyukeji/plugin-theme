@@ -1,20 +1,20 @@
 <?php
 
-namespace Foolz\Theme;
+namespace Hongyukeji\Theme;
 
 class View
 {
     /**
      * Instance of builder that created this View
      *
-     * @var  \Foolz\Theme\Builder
+     * @var  \Hongyukeji\Theme\Builder
      */
     protected $builder;
 
     /**
      * Instance of a props object
      *
-     * @var  \Foolz\Theme\Props
+     * @var  \Hongyukeji\Theme\Props
      */
     protected $props = null;
 
@@ -42,13 +42,13 @@ class View
     /**
      * Construct a View, it may be partial or layout
      *
-     * @param  \Foolz\Theme\Builder  $builder  The Builder object creating this view
+     * @param  \Hongyukeji\Theme\Builder  $builder  The Builder object creating this view
      * @param  string                $type     The type of view, it can be partial or layout
      * @param  string                $view     The name of the view
      *
-     * @return  \Foolz\Theme\View  The new view
+     * @return  \Hongyukeji\Theme\View  The new view
      */
-    public static function forge(\Foolz\Theme\Builder $builder, $type, $view)
+    public static function forge(\Hongyukeji\Theme\Builder $builder, $type, $view)
     {
         // get the View object in case it can be found
         $theme = $builder->getTheme();
@@ -74,10 +74,10 @@ class View
     /**
      * Set the builder
      *
-     * @param \Foolz\Theme\Builder $builder
-     * @return \Foolz\Theme\View
+     * @param \Hongyukeji\Theme\Builder $builder
+     * @return \Hongyukeji\Theme\View
      */
-    public function setBuilder(\Foolz\Theme\Builder $builder)
+    public function setBuilder(\Hongyukeji\Theme\Builder $builder)
     {
         $this->builder = $builder;
 
@@ -87,7 +87,7 @@ class View
     /**
      * Returns the Builder that created the View
      *
-     * @return  \Foolz\Theme\Builder  The Builder object
+     * @return  \Hongyukeji\Theme\Builder  The Builder object
      */
     public function getBuilder()
     {
@@ -97,7 +97,7 @@ class View
     /**
      * Returns the global parameter manager located in the builder
      *
-     * @return  \Foolz\Theme\ParamManager  The ParamManager that belongs to the Builder
+     * @return  \Hongyukeji\Theme\ParamManager  The ParamManager that belongs to the Builder
      */
     public function getBuilderParamManager()
     {
@@ -107,7 +107,7 @@ class View
     /**
      * Returns the theme that belongs to this view
      *
-     * @return  \Foolz\Theme\Theme  The Theme that created this View
+     * @return  \Hongyukeji\Theme\Theme  The Theme that created this View
      */
     public function getTheme()
     {
@@ -117,7 +117,7 @@ class View
     /**
      * Returns the asset manager that belongs to the theme that created this view
      *
-     * @return  \Foolz\Theme\AssetManager The Theme's AssetManager
+     * @return  \Hongyukeji\Theme\AssetManager The Theme's AssetManager
      */
     public function getAssetManager()
     {
@@ -129,7 +129,7 @@ class View
      *
      * @param  string  $type  The type of view
      *
-     * @return  \Foolz\Theme\View  The current object
+     * @return  \Hongyukeji\Theme\View  The current object
      */
     public function setType($type)
     {
@@ -154,7 +154,7 @@ class View
      *
      * @param  string  $view  The name of the view
      *
-     * @return  \Foolz\Theme\View  The current object
+     * @return  \Hongyukeji\Theme\View  The current object
      */
     public function setView($view)
     {
@@ -176,11 +176,11 @@ class View
     /**
      * Sets the Parameter Manager
      *
-     * @param  \Foolz\Theme\ParamManager  $param_manager  The parameter manager
+     * @param  \Hongyukeji\Theme\ParamManager  $param_manager  The parameter manager
      *
-     * @return  \Foolz\Theme\View  The current object
+     * @return  \Hongyukeji\Theme\View  The current object
      */
-    public function setParamManager(\Foolz\Theme\ParamManager $param_manager)
+    public function setParamManager(\Hongyukeji\Theme\ParamManager $param_manager)
     {
         $this->param_manager = $param_manager;
 
@@ -190,7 +190,7 @@ class View
     /**
      * Returns the ParamManager for the View
      *
-     * @return  \Foolz\Theme\ParamManager  The Parameter Manger to pass variables to the view
+     * @return  \Hongyukeji\Theme\ParamManager  The Parameter Manger to pass variables to the view
      */
     public function getParamManager()
     {
@@ -224,7 +224,7 @@ class View
     /**
      * Compiles the view
      *
-     * @return  \Foolz\Theme\View  The current object
+     * @return  \Hongyukeji\Theme\View  The current object
      */
     public function doBuild()
     {

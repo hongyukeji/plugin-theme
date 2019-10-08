@@ -1,8 +1,8 @@
 <?php
 
-namespace Foolz\Foolfake\Theme\Fake\Partial;
+namespace Hongyukeji\Foolfake\Theme\Fake\Partial;
 
-class ThisPartial extends \Foolz\Theme\View
+class ThisPartial extends \Hongyukeji\Theme\View
 {
 	public function toString()
 	{

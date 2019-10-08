@@ -1,13 +1,13 @@
 <?php
 
-namespace Foolz\Theme;
+namespace Hongyukeji\Theme;
 
 class Builder
 {
     /**
      * The theme object
      *
-     * @var  \Foolz\Theme\Theme
+     * @var  \Hongyukeji\Theme\Theme
      */
     protected $theme = null;
 
@@ -21,28 +21,28 @@ class Builder
     /**
      * The selected layout
      *
-     * @var  \Foolz\Theme\View
+     * @var  \Hongyukeji\Theme\View
      */
     protected $layout = null;
 
     /**
      * The array of named partials with their data and object
      *
-     * @var  \Foolz\Theme\View[]  Associative array with as key the given name of the partial
+     * @var  \Hongyukeji\Theme\View[]  Associative array with as key the given name of the partial
      */
     protected $partials = [];
 
     /**
      * "Global" parameter manager, for the entire Builder
      *
-     * @var \Foolz\Theme\ParamManager
+     * @var \Hongyukeji\Theme\ParamManager
      */
     protected $param_manager;
 
     /**
      * Instance of a props object
      *
-     * @var  \Foolz\Theme\Props
+     * @var  \Hongyukeji\Theme\Props
      */
     protected $props = null;
 
@@ -56,9 +56,9 @@ class Builder
     /**
      * We need at least a theme
      *
-     * @param  \Foolz\Theme\Theme  $theme  The theme object creating this builder
+     * @param  \Hongyukeji\Theme\Theme  $theme  The theme object creating this builder
      */
-    public function __construct(\Foolz\Theme\Theme $theme)
+    public function __construct(\Hongyukeji\Theme\Theme $theme)
     {
         $this->theme = $theme;
         $this->param_manager = new ParamManager();
@@ -68,7 +68,7 @@ class Builder
     /**
      * Returns the theme object
      *
-     * @return  \Foolz\Theme\Theme  Returns the theme object that created this Builder
+     * @return  \Hongyukeji\Theme\Theme  Returns the theme object that created this Builder
      */
     public function getTheme()
     {
@@ -81,7 +81,7 @@ class Builder
      * @param  null|string  $style The key of the style, null for setting no style
      *
      * @throws  \OutOfBoundsException  If the style doesn't exist
-     * @return  $this  \Foolz\Theme\Builder
+     * @return  $this  \Hongyukeji\Theme\Builder
      */
     public function setStyle($style = null)
     {
@@ -115,7 +115,7 @@ class Builder
     /**
      * Returns the Builder instance of the Parameter Manger
      *
-     * @return  \Foolz\Theme\ParamManager
+     * @return  \Hongyukeji\Theme\ParamManager
      */
     public function getParamManager()
     {
@@ -125,7 +125,7 @@ class Builder
     /**
      * Returns the props object to manage title, meta etc.
      *
-     * @return  \Foolz\Theme\Props  The props object
+     * @return  \Hongyukeji\Theme\Props  The props object
      */
     public function getProps()
     {
@@ -137,7 +137,7 @@ class Builder
      *
      * @param  string  $view  The name of the view file, all lowercase and with words separated with underscore
      *
-     * @return  \Foolz\Theme\View
+     * @return  \Hongyukeji\Theme\View
      */
     public function createLayout($view)
     {
@@ -150,7 +150,7 @@ class Builder
      * @param  string  $name  A given name for the partial
      * @param  string  $view  The name of the view file, all lowercase and with words separated with underscore
      *
-     * @return  \Foolz\Theme\View  The View object for the partial
+     * @return  \Hongyukeji\Theme\View  The View object for the partial
      */
     public function createPartial($name, $view)
     {
@@ -160,7 +160,7 @@ class Builder
     /**
      * Returns the previously created layout
      *
-     * @return  \Foolz\Theme\View        The recalled layout
+     * @return  \Hongyukeji\Theme\View        The recalled layout
      * @throws  \BadMethodCallException  If the layout wasn't created before
      */
     public function getLayout()
@@ -177,7 +177,7 @@ class Builder
      *
      * @param  string  $name  The given name of the partial
      *
-     * @return  \Foolz\Theme\View      The recalled partial
+     * @return  \Hongyukeji\Theme\View      The recalled partial
      * @throws  \OutOfBoundsException  If the partial wasn't created before
      */
     public function getPartial($name)

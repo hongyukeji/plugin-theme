@@ -1,8 +1,8 @@
 <?php
 
-namespace Foolz\Theme;
+namespace Hongyukeji\Theme;
 
-class Void extends \Foolz\Plugin\Void
+class Void extends \Hongyukeji\Plugin\Void
 {
 
 }

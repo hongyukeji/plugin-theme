@@ -1,6 +1,6 @@
 <?php
 
-use Foolz\Theme\Util as Util;
+use Hongyukeji\Theme\Util as Util;
 
 class UtilTest extends PHPUnit_Framework_TestCase
 {

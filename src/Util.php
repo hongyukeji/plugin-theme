@@ -1,6 +1,6 @@
 <?php
 
-namespace Foolz\Theme;
+namespace Hongyukeji\Theme;
 
 class Util
 {

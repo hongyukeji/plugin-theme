@@ -1,13 +1,13 @@
 <?php
 
-use Foolz\Theme\Theme as Theme;
-use Foolz\Theme\Loader as Loader;
+use Hongyukeji\Theme\Theme as Theme;
+use Hongyukeji\Theme\Loader as Loader;
 
 class ThemeTest extends PHPUnit_Framework_TestCase
 {
     /**
      *
-     * @return  \Foolz\Theme\Loader
+     * @return  \Hongyukeji\Theme\Loader
      */
     public function load()
     {
@@ -25,28 +25,28 @@ class ThemeTest extends PHPUnit_Framework_TestCase
 
     /**
      *
-     * @return  \Foolz\Theme\Theme
+     * @return  \Hongyukeji\Theme\Theme
      */
     public function theme()
     {
         $loader = $this->load();
         
-        return $loader->get('themes', 'foolz/foolfake-theme-fake');
+        return $loader->get('themes', 'hongyukeji/foolfake-theme-fake');
     }
 
     public function testTheme()
     {
-        $this->assertInstanceOf('Foolz\Theme\Theme', $this->theme());
+        $this->assertInstanceOf('Hongyukeji\Theme\Theme', $this->theme());
     }
 
     public function testCreateBuilder()
     {
-        $this->assertInstanceOf('Foolz\Theme\Builder', $this->theme()->createBuilder());
+        $this->assertInstanceOf('Hongyukeji\Theme\Builder', $this->theme()->createBuilder());
     }
 
     public function testGetAssetManager()
     {
-        $this->assertInstanceOf('Foolz\Theme\AssetManager', $this->theme()->getAssetManager());
+        $this->assertInstanceOf('Hongyukeji\Theme\AssetManager', $this->theme()->getAssetManager());
     }
 
     /**
@@ -56,14 +56,14 @@ class ThemeTest extends PHPUnit_Framework_TestCase
     public function testGetExtendedThrowsOutOfBoundsNull()
     {
         $loader = $this->load();
-        $loader->get('themes', 'foolz/foolfake-theme-fake');
+        $loader->get('themes', 'hongyukeji/foolfake-theme-fake');
         $this->theme()->getExtended();
     }
 
     public function testGetNamespace()
     {
         $loader = $this->load();
-        $loader->get('themes', 'foolz/foolfake-theme-fake');
-        $this->assertSame('Foolz\Foolfake\Theme\Fake', $this->theme()->getNamespace());
+        $loader->get('themes', 'hongyukeji/foolfake-theme-fake');
+        $this->assertSame('Hongyukeji\Foolfake\Theme\Fake', $this->theme()->getNamespace());
     }
 }
